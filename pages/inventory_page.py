@@ -1,3 +1,4 @@
+import re
 from playwright.sync_api import Page, expect
 
 
@@ -14,7 +15,7 @@ class InventoryPage:
         self.cart_link = page.locator(".shopping_cart_link")
 
     def expect_loaded(self):
-        expect(self.page).to_have_url(lambda url: "inventory.html" in url)
+        expect(self.page).to_have_url(re.compile(r"inventory\.html"))
         expect(self.items.first).to_be_visible()
 
     def sort_by(self, value: str):
