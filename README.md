@@ -1,3 +1,4 @@
+![Tests](https://github.com/Swathymahesh/QA-Automation-Framework/actions/workflows/tests.yml/badge.svg)
 # QA Automation Framework
 
 End-to-end UI and API test automation framework built with **Playwright (Python)** and **pytest**.
@@ -9,6 +10,11 @@ public [JSONPlaceholder](https://jsonplaceholder.typicode.com) service.
 - **Tagged test suites**: `smoke` (fast, critical flows), `regression`, `api`
 - **Data-driven tests**: login failures use `pytest.mark.parametrize`
 - **CI/CD**: GitHub Actions runs smoke tests first, then the full suite, nightly and on every push; HTML reports are uploaded as artifacts
+
+## Results
+- 15 automated tests (10 UI, 5 API), all passing in CI
+- Smoke suite runs in under a minute; full suite runs on every push and nightly
+- HTML reports are published as build artifacts
 
 ## Project layout
 ```
